@@ -4,9 +4,9 @@ int main(int argc, char *argv[]) {
     SDL_Window *window = SDL_CreateWindow("Traveling-Salesman Genetic Algorithm", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, 1024, 512, SDL_WINDOW_SHOWN);
     SDL_Renderer* renderer = SDL_CreateRenderer(window, -1, 0);
 
-    int board_width = 256;
+    int board_width = 512;
     int board_height = 256;
-    int num_cities = 32;
+    int num_cities = 64;
     int k = 64;
     float graph_screen_proportion = 0.125;
     switch(argc)
