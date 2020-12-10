@@ -48,6 +48,7 @@ int main(int argc, char *argv[]) {
     SDL_DestroyWindow(window);
     SDL_Quit();
 
+    save_tsp(&the_tsp);
     free_tsp(&the_tsp);
 
     return 0;

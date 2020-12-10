@@ -140,6 +140,22 @@ void draw_tsp(const tsp * const p_tsp, SDL_Window * const window)
     }
 }
 
+void save_tsp(const tsp * const p_tsp)
+{
+    char file_name[40];
+    struct tm *time_now;
+    time_t now = time(NULL);
+    time_now = gmtime(&now);
+    strftime(file_name, sizeof(file_name), "TSPGA_%Y-%m-%d_%H-%M-%S.csv", time_now);
+    FILE *fp = fopen(file_name, "w");
+    fprintf(fp, "Generation Number, Shortest Distance\n");
+    for(int i = 0; i < p_tsp->distance_graph.data_size; ++i)
+    {
+        fprintf(fp, "%d, %f\n", (i + 1), p_tsp->distance_graph.data[i]);
+    }
+    fclose(fp);
+}
+
 void free_tsp(tsp * const p_tsp)
 {
     free(p_tsp->cities);

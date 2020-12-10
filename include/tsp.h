@@ -30,6 +30,7 @@ typedef struct
 void initialize_tsp(tsp * const p_tsp, int board_width, int board_height, int num_cities, int k, float graph_screen_proportion);
 void update_tsp(tsp * const p_tsp);
 void draw_tsp(const tsp * const p_tsp, SDL_Window * const window);
+void save_tsp(const tsp * const p_tsp);
 void free_tsp(tsp * const p_tsp);
 
 #endif //TSPGA_TSP_H
