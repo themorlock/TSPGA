@@ -13,7 +13,7 @@ $ git clone https://github.com/themorlock/TSPGA.git
 $ cd TSPGA
 $ mkdir build
 $ cd build
-$ cmake ..
+$ cmake -DCMAKE_BUILD_TYPE=Release ..
 $ make
 ```
 

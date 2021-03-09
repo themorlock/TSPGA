@@ -6,7 +6,7 @@ int main(int argc, char *argv[]) {
 
     int board_width = 512;
     int board_height = 256;
-    int num_cities = 64;
+    int num_cities = 512;
     int k = 64;
     float graph_screen_proportion = 0.125;
     switch(argc)
